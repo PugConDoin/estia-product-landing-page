@@ -1,5 +1,276 @@
-/* fonts */
+/***************************
+* REFERENCE FONTS & COLORS * 
+****************************/
 /* 
 font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif; 
+primary-color: #333;
+accent-color: #209791;
+secondary-color: #444;
+overlay-color: rgba(0, 0, 0, 0.7)
 */
+
+/****************************
+***** SET BASE STYLES *******
+*****************************/
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #777;
+  --accent-color: #209791;
+  --color-white: #ffffff;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* sets base font size to 62.5% of 16px = 10px */
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/**** END BASE STYLES *******/
+
+/****************************
+******** SHOWCASE **********
+*****************************/
+
+.container {
+  max-width: 1100px; /* responsive setup */
+  margin: auto; /* centers everything */
+  overflow: hidden; /* prevents content breaking out */
+  padding: 0 2em; /* left and right only */
+}
+
+.navbar {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  letter-spacing: 0rem;
+}
+
+.navbar .nav {
+  justify-self: flex-end; /* pushes ul to the right end of the container */
+  display: flex; /* aligns li items sideby side */
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .nav a {
+  padding: 0 1em;
+  text-align: center;
+}
+
+.navbar .nav a:hover {
+  color: var(--accent-color);
+}
+
+.header {
+  margin: 2rem 0;
+}
+
+.header .container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 10.4rem;
+  font-weight: 900;
+  margin-bottom: 4.8rem;
+}
+
+.subheading {
+  font-size: 4.1rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  letter-spacing: 0rem;
+  margin-bottom: 3.2rem;
+}
+
+.header p {
+  font-size: 1.6rem;
+  margin-right: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.header img {
+  max-height: 100%;
+}
+
+/****************************
+******** THE TASTE **********
+*****************************/
+
+.inspiration {
+  position: relative;
+  background: url('../img/background.jpg');
+  background-color: var(--primary-color);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: center/cover;
+  height: 100vh;
+}
+
+.inspiration-inner {
+  color: var(--color-white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 860px;
+  padding: 5rem 0;
+}
+
+.inspiration-inner h3 {
+  font-size: 3.2rem;
+}
+
+.inspiration-inner h2 {
+  font-size: 6.5rem;
+  margin-top: 4.8rem;
+}
+
+.inspiration-inner p {
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+/****************************
+******** GALLERY **********
+*****************************/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  /* gap: 0.5em; */
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 9;
+}
+
+.gallery__item--2 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item--3 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.gallery__item--4 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.gallery__item--5 {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 9;
+}
+
+.gallery__item--6 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 5;
+  grid-row-end: 9;
+}
+
+.photos {
+  width: 100%;
+}
+
+/****************************
+******** UTILITIES **********
+*****************************/
+
+.btn {
+  display: inline-block; /* allows us to apply width etc */
+  background: var(--primary-color);
+  color: var(--color-white);
+  font-weight: 600;
+  margin-top: 1.6em;
+  padding: 0.8em 1.6em;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  border-radius: 10em;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--overlay-color);
+}

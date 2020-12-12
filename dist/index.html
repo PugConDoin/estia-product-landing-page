@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome fonts -->
+    <script
+      src="https://kit.fontawesome.com/e9defc1be2.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link to simplelightbox pre-configured css file -->
+    <link rel="stylesheet" href="css/simplelightbox.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link to our stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Spirit of Estia | Award-Winning Olive Brine Gin</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Spirit of Estia</h1>
+        <ul class="nav">
+          <li><a href="#">The Perfect G&T</a></li>
+          <li><a href="#">The Taste</a></li>
+          <li><a href="#">The Story</a></li>
+          <li><a href="#">Buy Now</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Showcase -->
+    <section class="header">
+      <div class="container">
+        <div>
+          <h1 class="heading">Estia No.7</h1>
+          <h2 class="subheading">Award-Winning & Supremely Smooth Gin</h2>
+          <p>
+            A slow distilltion of the finest British and Mediterranean
+            ingredients make for an alluring spirit, luxurious cocktails and
+            compelling G&Ts.
+          </p>
+          <a href="#" class="btn">BUY NOW</a>
+        </div>
+        <img src="img/estia-olive-brine-gin-bottle-image.png" alt="" />
+      </div>
+    </section>
+    <!-- Inspiration -->
+    <section class="inspiration">
+      <div class="overlay">
+        <div class="inspiration-inner">
+          <h3>Spoil Yourself</h3>
+          <h2>The Perfect Gin & Tonic</h2>
+          <p>
+            Pour over extra large chunks of ice with premium tonic water and a
+            twist of orange. Expressing the fragrant oils of orange zest over
+            the surface of your drink will provide the perfect aroma and a
+            perceived acidity that enhances Estia No.7's fusion of citrus, spice
+            and olive for a complex and uniquely smooth drink that cannot be
+            beaten.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Photo Gallery -->
+    <section class="photos">
+      <div class="gallery">
+        <a
+          href="img/bottles-from-production.png"
+          class="big gallery__item gallery__item--1"
+        >
+          <img
+            src="img/bottles-from-production.png"
+            class="gallery__img"
+            alt="Image 1"
+          />
+        </a>
+        <a
+          href="img/estia-and-oranges.png"
+          class="big gallery__item gallery__item--2"
+        >
+          <img
+            src="img/estia-and-oranges.png"
+            class="gallery__img"
+            alt="Image 2"
+          />
+        </a>
+        <a
+          href="img/estia-grapefruit.png"
+          class="big gallery__item gallery__item--3"
+        >
+          <img
+            src="img/estia-grapefruit.png"
+            class="gallery__img"
+            alt="Image 3"
+          />
+        </a>
+        <a
+          href="img/estia-in-hand.png"
+          class="big gallery__item gallery__item--4"
+        >
+          <img src="img/estia-in-hand.png" class="gallery__img" alt="Image 4" />
+        </a>
+        <a
+          href="img/estia-outside0orange-rosemary.png"
+          class="big gallery__item gallery__item--5"
+        >
+          <img
+            src="img/estia-outside0orange-rosemary.png"
+            class="gallery__img"
+            alt="Image 5"
+          />
+        </a>
+        <a href="img/estia-winner.png" class="gallery__item gallery__item--6">
+          <img src="img/estia-winner.png" class="gallery__img" alt="Image 6" />
+        </a>
+      </div>
+    </section>
+
+    <!-- initialise jquery for lightbox -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- link to pre-configured gallery lightbox -->
+    <script src="js/simple-lightbox.min.js"></script>
+    <!-- one line of jquery to set the images and anchor tags -->
+    <script>
+      $(function () {
+        const gallery = $('.gallery a').simpleLightbox();
+      });
+    </script>
+  </body>
+</html>
+<!-- git repo setup to track changes
++ add a .gitignore file in main project folder 
+in terminal:
+> cd into master folder
+> 'git init'
+> 'git add .'' to stage all contents and track all files
+> 'git commit -am "first commit with project setup"'
+create a new repo @ www.github.com 
+from landing page that opens: copy the command and link to push an existing repo from the commandline
+> "git remote add origin https://github.com/PugConDoin/estia-product-landing-page.git"
+> git branch -M main
+> git push -u origin main
+-->
