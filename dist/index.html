@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- link to simplelightbox pre-configured css file -->
-    <link rel="stylesheet" href="css/simplelightbox.min.css" />
+    <link rel="stylesheet" href="css/simple-lightbox.min.css" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -26,15 +26,14 @@
       <div class="container">
         <h1 class="logo">Spirit of Estia</h1>
         <ul class="nav">
-          <li><a href="#">The Perfect G&T</a></li>
-          <li><a href="#">The Taste</a></li>
-          <li><a href="#">The Story</a></li>
+          <li><a href="#inspiration">The Perfect G&T</a></li>
+          <li><a href="#taste">The Taste</a></li>
           <li><a href="#">Buy Now</a></li>
         </ul>
       </div>
     </nav>
     <!-- Showcase -->
-    <section class="header">
+    <header id="header">
       <div class="container">
         <div>
           <h1 class="heading">Estia No.7</h1>
@@ -46,11 +45,15 @@
           </p>
           <a href="#" class="btn">BUY NOW</a>
         </div>
-        <img src="img/estia-olive-brine-gin-bottle-image.png" alt="" />
+        <img
+          src="img/estia-olive-brine-gin-bottle-image.png"
+          id="header-img"
+          alt="bottle of estia gin"
+        />
       </div>
-    </section>
+    </header>
     <!-- Inspiration -->
-    <section class="inspiration">
+    <section id="inspiration">
       <div class="overlay">
         <div class="inspiration-inner">
           <h3>Spoil Yourself</h3>
@@ -66,12 +69,63 @@
         </div>
       </div>
     </section>
+    <!-- Taste -->
+    <section id="taste">
+      <h1 class="section-title">Complex & Smooth</h1>
+      <div class="taste-inner">
+        <img src="img/copper.png" id="copper-img" alt="copper distiller" />
+        <div id="distill-text">
+          <h2 class="taste-subhead">The Art of Distilling</h2>
+          <p>
+            There are many gins but not all are created equal. Estia No.7 is an
+            exceptionally smooth London Dry Gin crafted from a unique recipe of
+            rich olive brine, the juice of Porter’s Perfection apples, citrus
+            and select botanicals.
+          </p>
+          <p>
+            This olive brine mix is combined with the finest British wheat grain
+            spirit and then distilled very slowly in a traditional copper still
+            to extract the essential oils and flavour the base spirit.
+          </p>
+          <p>
+            The process of slow distillation and combination of flavours and
+            oils are harmoniously presented. The result is a complex and
+            extremely well-rounded gin that is uniquely smooth.
+          </p>
+        </div>
+        <h3 id="taste-quote">
+          "We only use the heart of the distillation in Estia No.7 which is then
+          reduced to bottle strength by hydrating with local spring water"
+        </h3>
+        <div id="taste-text">
+          <h2 class="taste-subhead">Unique Taste</h2>
+          <p>
+            Estia No.7 Gin stands out from the crowd. Many of the ingredients
+            such as juniper, angelica root, coriander, rosemary, thyme and
+            cardamom are the mainstays of many a gin recipe but these
+            traditional notes are transformed with the addition of our rich
+            olive brine. The recipe is lifted with citrus and distilled as one
+            for an alluring taste. Estia No.7 is a wonderfully smooth, clean gin
+            with a delicate taste of orange, apples and cardamom, enhanced by
+            the olive brine distillation. It’s a big gin that’s smooth enough to
+            be enjoyed on its own but bold enough to excite mixologists and
+            cocktail makers everywhere.
+          </p>
+        </div>
+        <img
+          src="img/glass-estia.png"
+          id="glass-estia"
+          alt="copper distiller"
+        />
+      </div>
+    </section>
+
     <!-- Photo Gallery -->
     <section class="photos">
       <div class="gallery">
         <a
           href="img/bottles-from-production.png"
-          class="big gallery__item gallery__item--1"
+          class="big gallery__item gallery__production"
         >
           <img
             src="img/bottles-from-production.png"
@@ -81,7 +135,7 @@
         </a>
         <a
           href="img/estia-and-oranges.png"
-          class="big gallery__item gallery__item--2"
+          class="big gallery__item gallery__oranges"
         >
           <img
             src="img/estia-and-oranges.png"
@@ -91,7 +145,7 @@
         </a>
         <a
           href="img/estia-grapefruit.png"
-          class="big gallery__item gallery__item--3"
+          class="big gallery__item gallery__grapefruit"
         >
           <img
             src="img/estia-grapefruit.png"
@@ -99,15 +153,12 @@
             alt="Image 3"
           />
         </a>
-        <a
-          href="img/estia-in-hand.png"
-          class="big gallery__item gallery__item--4"
-        >
+        <a href="img/estia-in-hand.png" class="big gallery__item gallery__hand">
           <img src="img/estia-in-hand.png" class="gallery__img" alt="Image 4" />
         </a>
         <a
           href="img/estia-outside0orange-rosemary.png"
-          class="big gallery__item gallery__item--5"
+          class="big gallery__item gallery__rosemary"
         >
           <img
             src="img/estia-outside0orange-rosemary.png"
@@ -115,21 +166,64 @@
             alt="Image 5"
           />
         </a>
-        <a href="img/estia-winner.png" class="gallery__item gallery__item--6">
+        <a href="img/estia-winner.png" class="gallery__item gallery__winner">
           <img src="img/estia-winner.png" class="gallery__img" alt="Image 6" />
         </a>
       </div>
     </section>
-
-    <!-- initialise jquery for lightbox -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Footer -->
+    <section id="footer">
+      <div class="container">
+        <div>
+          <h2>Spirit of Estia</h2>
+          <a href="https://www.instagram.com/spiritofestia/">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.facebook.com/SpiritOfEstia">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <ul>
+            <li>Olives Et Al</li>
+            <li>Sturminster Newton</li>
+            <li>Dorset</li>
+            <li>01258 474 300</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Subscribe</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+            cumque!
+          </p>
+          <form name="email-form" method="POST" data-netlify="true">
+            <div class="email-form">
+              <span class="form-control-wrap">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  size="40"
+                  class="form-control"
+                  placeholder="Email"
+                />
+              </span>
+              <button type="submit" class="form-control submit">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <!-- link to pre-configured gallery lightbox -->
     <script src="js/simple-lightbox.min.js"></script>
     <!-- one line of jquery to set the images and anchor tags -->
     <script>
-      $(function () {
-        const gallery = $('.gallery a').simpleLightbox();
-      });
+      new SimpleLightbox('.gallery a');
+      // const lightbox = new SimpleLightbox('.gallery-images a');
     </script>
   </body>
 </html>
